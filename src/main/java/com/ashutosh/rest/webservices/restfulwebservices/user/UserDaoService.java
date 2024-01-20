@@ -33,6 +33,15 @@ public class UserDaoService {
         return null;
     }
 
+    public void deleteById(int id){
+        for(User user: users){
+            if(user.getId() == id){
+                users.remove(user);
+            }
+        }
+
+    }
+
     public User save(User user){
         user.setId(++userCount);
         users.add(user);

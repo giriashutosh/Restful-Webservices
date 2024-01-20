@@ -1,1 +1,4 @@
-1. when we return the object or bean from the rest api it converts into json
+1. when we return the object or bean from the rest api it converts into
+2. for validation we have spring-boot-starter-validation
+   @Valid, @Size
+   open api starter for api docs
