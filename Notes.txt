@@ -2,3 +2,6 @@
 2. for validation we have spring-boot-starter-validation
    @Valid, @Size
    open api starter for api docs
+   response in xml format
+   internationalization- i18n
+    -consumers of rest api around the world
