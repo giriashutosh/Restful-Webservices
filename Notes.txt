@@ -1,7 +1,23 @@
 1. when we return the object or bean from the rest api it converts into
-2. for validation we have spring-boot-starter-validation
+2. for Validation we have spring-boot-starter-validation
    @Valid, @Size
    open api starter for api docs
    response in xml format
    internationalization- i18n
     -consumers of rest api around the world
+    Accept-language header used for language
+    API versioning breaking change
+      options - URL - for caching, Request Parameter, Header - not compatible with browsers, Media Type
+      Factors - URI pollution, missuse of http headers, API docs easy with URI
+    HATEOAS
+      Hypermedia as the engine of application state
+      standard implementation HAL (JSON Hypertext Application Language)- simple format
+      spring HATEOAS
+      HATEOAS CONCEPT - Entity model, WebMvcLinkBuilder
+    Serialization - converting object to stream (ex - json) using jackson library in java
+     1. customized response field using @JsonProperty
+     2. Filtering return only selected field like no need to send password from bean
+        2.1 static filtering - @JsonIgnoreProperties, @JsonIgnore when we dont want to send specific field as response for any api. logic write in bean
+        2.2 dynamic filtering - @JsonFilter with FilterProvider when we want to send the specific field for some api for some not. logic
+                                need to write in rest api itself.
+
