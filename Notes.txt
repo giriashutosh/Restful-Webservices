@@ -21,3 +21,5 @@
         2.2 dynamic filtering - @JsonFilter with FilterProvider when we want to send the specific field for some api for some not. logic
                                 need to write in rest api itself.
 
+     HAL Explorer - An api explorer for restful Hypermedia APIs
+     enable non-tech teams to play with the api

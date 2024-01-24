@@ -1,14 +1,27 @@
 package com.ashutosh.rest.webservices.restfulwebservices.user;
 
+import com.ashutosh.rest.webservices.restfulwebservices.posts.Post;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
+import java.util.List;
 
+@Entity(name = "user_details")
 public class User {
+    @Id
+    @GeneratedValue
     private Integer id;
 
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Post> posts;
     @Size(min=2, message = "Name should have atleast 2 Characters")
     @JsonProperty("user_name")
     private String name;
