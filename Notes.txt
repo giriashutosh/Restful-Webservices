@@ -23,3 +23,7 @@
 
      HAL Explorer - An api explorer for restful Hypermedia APIs
      enable non-tech teams to play with the api
+
+ How spring security works
+  request send -> intercept by spring security -> filter chains works -> all request should be authenticated, else login page shown -> enable check for csrf -> POST, PUT
+  FOR overriding spring security write configuration
